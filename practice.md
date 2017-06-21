@@ -6,7 +6,8 @@ This is the git practice I'm doing:
 4. Checkout master & make some commits
 5. Add the commits and push origin master
 6. git checkout \<branch\>
-7. Run git rebase master
+7. Run git rebase master (solve the conflicts and then git rebase
+   --continue)
 8. run `git push <branch_name>` (you should get an error message)
 9. run `git push -f origin <branch_name>`
 10. checkout master
