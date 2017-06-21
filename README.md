@@ -94,3 +94,51 @@ When we make a change in our forked reposotory
 `$ git push origin <branch_name>`  
 `new pull request`  
 `create new pull request`  
+
+## GitHub Pages
+We can create a webpage with our username. Is only for FRONTEND code (HTML, CSS, JS). Unlimited webpages
+
+**Steps**  
+1. Create a repository: lizparody.github.io.  
+2. Git clone.  
+3. Write the code in your local machine.  
+4. Put the code on GitHub.  
+5. You can open your webpage with the lizparody.github.io domain. 
+
+**Projects** 
+We can create webpages for our projects or repositories.  
+1. Create a new repository.  
+2. Clone it into your local machine. 
+3. Create a new branch `$ git branch gh-pages` (everything in this branch is going to be in our webpage).  
+4. `$ git push origin gh-pages`.  
+
+Go to GitHub > Branch > Click on the branch
+To go to the webpage just type the url: lizparody.github.io/<project-name>
+
+## Deployment with Git
+To have a local repository, send it to GitHub and then send it to a server.
+
+**SSH KEYS**  
+It help us to conect easily with a server without having to enter a password everytime. 
+
+`$ ssh-keygen` to generate a SSH key.   
+Then, press enter (the ssh key will be located in the home directory).
+
+`$ cd .ssh`    
+`$ ls` => id\_rsa (private key) => id\_rsa.pub (public key)  
+`$ cat id_rsa.pub` we can see the key  
+Copy the key into github > Settings > SSH Keys > Add SSH key > Title (MacBook) > key and copy the SSH Key.  
+In the Repository, copy the SSH key and type: `$ git remote add origin <SSH key>`
+
+**Git Ignore**  
+Create a file called .gitignore `$ touch .gitignore` and put all the files that should be ignored here.
+
+**Server**     
+After pushing a commit into github, we need to put the public key on the server. We will have access to the server through SSH.
+
+Digital Ocean let us use SSH keys (also Heroku, Amazon Web Services).
+To connect with the server: `$ ssh root@mydomain.com` enter password.
+
+Add the SSH KEY of the server into GitHub.
+
+Install git on your server.
